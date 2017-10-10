@@ -11,9 +11,6 @@
   &::-webkit-slider-thumb {
     @content;
   }
-  &::-ms-thumb {
-    @content;
-  }
 }
 
 @mixin range-track() {
