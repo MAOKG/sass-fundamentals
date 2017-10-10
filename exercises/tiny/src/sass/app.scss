@@ -1,0 +1,11 @@
+@for $i from 1 through 5 {
+  $dMap: (t:top, b:bottom, l:left, r:right);
+  $nMap: (m:margin, p:padding);
+  @each $d in map-keys($dMap) {
+    @each $n in map-keys($nMap) {
+      .#{$n}-#{$d}-#{$i*5} {
+        #{map-get($nMap, $n)}-#{map-get($dMap, $d)}: $i*5px;
+      }
+    }
+  }
+}
